@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - <%=title%></title>
+</head>
+<body>
+  <nav>
+    <a href=""><h1>Blog</h1></a>
+  <%- include('./partials/nav.ejs') %>
+  </nav>
+  <h1>Home</h1>
+  <div class="blogs content">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos cupiditate fugiat quae aut repudiandae placeat, deserunt quam quidem neque aliquam quasi quis. Perspiciatis amet illum blanditiis odio, dicta voluptate commodi?
+  </div>
+<script>
+  <% for(var i=0; i<5; i++){ %>
+    <h1> 안녕 </h1>
+  <%} %>
+</script>
+
+
+
+  <%- include('./partials/footer.ejs') %>
+</body>
+</html>

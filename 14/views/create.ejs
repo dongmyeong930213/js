@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <nav>
+  <%- include('./partials/nav.ejs') %>
+    <a href=""><h1>Blog</h1></a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/create">Create</a></li>
+    </ul>
+  </nav>
+  <h1>Create</h1>
+  <div class="create-blog content">
+    <form action="">
+      <label for="title">Blog Title:</label>
+      <input type="text" id="tilte">
+      <label for="Blogs"></label>
+      <input type="text">
+      <label for="body">Blog Body</label>
+      <textarea name="" id="" cols="30" rows="10" id="body"></textarea>
+      <button>Submit</button>
+    </form>
+  </div>
+  <%- include('./partials/footer.ejs') %>
+</body>
+</html>
