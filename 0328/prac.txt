@@ -1,0 +1,5 @@
+// npm install ejs,express,nodemon
+->
+npm start
+
+.json = "start" : nodemon app.js ,
