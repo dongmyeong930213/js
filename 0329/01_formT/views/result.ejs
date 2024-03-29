@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Result : <%= title %></h1>
+    <div>
+        <span><%=userInfo.id   %>님 환영합니다</span>
+    </div>
+    비밀번호는 <span><%=userInfo.pw  %> 입니다</span>
+
+    <script>
+        window.onload=function(){
+            console.log(title, userInfo)
+        }
+
+    </script>
+</body>
+</html>
