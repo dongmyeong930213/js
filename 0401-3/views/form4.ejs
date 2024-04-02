@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <form action="/upload/fields" method="post" enctype="multipart/form-data">
+        <input type="file" name="file1">
+        <input type="file" name="file2">
+        <button>업로드</button>
+    </form>
+    <hr>
+    <h2>dyna</h2>
+    <input type="text" name="title" id="title" placeholder="Title">
+    <input type="file" name="dynamicFile" id="dynamicfile">
+    <button type="button" onclick="fileUpload()">업로드</button>
+    <img src="" alt="">
+    <script>
+        function fileUpload(){
+            const file = document.querySelector('#title');
+            const title = document.querySelector('#dynamicFile');
+            const imgElem = document.querySelector('img');
+            const formData = new FormData();
+            formData.append('dynamicFile', file.files[0])
+            formData.append('tilte', title.value[0])
+
+            axios({
+                method:'post',
+                url:'/dynamic',
+                data:formData,
+                Headers:{'Content-Type' : 'multiplart/form-data'}
+            }).then(res=>{
+                console.log(res.data);
+                const {file, title} = res.data
+                const imgElem = document.querySelector('img');
+                imgElem.src = "/" + file.path;
+                imgElem.alt=title;
+                imgElem.classList.add('profile')
+            })
+
+        }
+    </script>
+</body>
+</html>
