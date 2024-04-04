@@ -1,0 +1,28 @@
+MYSQL 사용하기 select문
+
+mysql> select date_format(now(), '%Y, %M, %D, %T');   (대문자 소문자 표기 다름)
+
+show databases;
+
+create (db생성)
+drop (db삭제)
+show (db보기)
+use (db사용)
+
+
+데이터베이스 기본 로컬호스트 : 127.0.0.1:3306
+
+Mysql 참고링크
+https://azure-pick-b47.notion.site/Database-65d5002aa8944c6c8ca22a4867237971
+
+mysql 실행방법 
+1. mysql -u root -p
+2. mysql -uroot -p -h localhost
+3. mysql -u root -p -h 127.0.0.1 
+
+
+-테이블 실습-
+create table `student` ( `student_id` int(11) not null auto_increment, `student_name` varchar(30) not null, `kor` int(11) null, `eng` int(11) null, `mat` int(11) null, primary key(student_id) ) ENGINE=InnoDB default charset=utf8;
+
+
+create table `author` ( `code` char(5) not null , `title` varchar(50) not null, `writer` varchar(20) null, `price` int not null, primary key(code) ) ENGINE=InnoDB default charset=utf8;
